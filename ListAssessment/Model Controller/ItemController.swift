@@ -16,7 +16,7 @@ class ItemController {
     init(){
         //create your fetchResultsController here
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-        let isCompleteSort = NSSortDescriptor(key: "isComplete", ascending: true)
+        let isCompleteSort = NSSortDescriptor(key: "isComplete", ascending: false)
         let nameSort = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [isCompleteSort, nameSort]
         let resultsFetched  = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.mainContext, sectionNameKeyPath: "isComplete", cacheName: nil)
