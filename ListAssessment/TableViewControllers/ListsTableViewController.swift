@@ -11,8 +11,11 @@ import CoreData
 
 class ListsTableViewController: UITableViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Shoppinglist Items"
         ItemController.shared.fetchedResultsController.delegate = self
     }
 

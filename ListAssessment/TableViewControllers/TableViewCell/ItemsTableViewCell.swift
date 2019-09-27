@@ -31,6 +31,10 @@ class ItemsTableViewCell: UITableViewCell {
         nameLabel.text = passedInItem.name
         let imageName = passedInItem.isComplete ? "complete" : "incomplete"
         checkmarkProperties.setImage(UIImage(named: imageName), for: .normal)
+        self.backgroundColor = passedInItem.isComplete ? .clear : .magenta
+      
     }
+    
+    
     
 }
